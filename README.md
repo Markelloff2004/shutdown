@@ -47,12 +47,17 @@ A desktop application that provides a countdown timer with shutdown confirmation
 1. Clone the repository
 2. Compile:
    ```cmd
-   javac -d out src/org/example/*.java src/org/example/core/*.java src/org/example/ui/*.java
+   javac -d out src/main/java/org/shutdown/Main.java src/main/java/org/shutdown/core/*.java src/main/java/org/shutdown/ui/*.java
    ```
 3. Create JAR:
    ```cmd
-   jar cvfm ShutdownApp.jar manifest.txt -C out .
+   jar cfe ShutdownApp.jar org.shutdown.Main -C out .
    ```
+4. Verification:
+   ```cmd
+   java -jar ShutdownApp.jar
+   ```
+   
 
 ## Scheduling with Windows Task Scheduler
 
